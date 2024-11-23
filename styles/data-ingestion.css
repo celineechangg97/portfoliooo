@@ -1,0 +1,189 @@
+body{
+    margin:0;
+    font-family: 'Open sans', sans-serif;
+    font-size: 20px;
+    padding-left: 80px;
+    padding-right: 80px;    
+}
+
+.header{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 20px;
+    position:fixed;
+    left:0;
+    right:0;
+    z-index:100;
+    background-color: white;
+}
+
+
+.header-content{
+    margin-right: 20px;
+    font-family: 'Delicious Handrawn', sans-serif;
+    font-size: 20px;
+    color: #2D2D2D;
+    text-decoration: none;
+}
+
+.header-content:hover{
+    color: #FF046D;
+}
+
+.spacer {
+    height: 100px; /* Equal to the height of the fixed header plus any desired gap */
+}
+
+
+
+
+/* set initial state of elements with this class*/
+.fade-in{
+    opacity:0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* final state after the animation*/
+.fade-in.visible{
+    opacity:1;
+    transform: translateY(0);
+}
+
+
+
+
+
+.imply-logo{
+    width: 150px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.page-title{
+    font-family: 'Delicious Handrawn', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.page-desc{
+    text-align: center;
+}
+
+.imply-landing-image{
+    width: 100%;
+    margin-top: 20px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+.section-project-desc-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    margin-bottom: 60px;
+}
+
+.section-project-desc{
+    display:flex;
+    column-gap: 10px;
+}
+
+
+.section-project-desc-title{
+    font-family: 'Delicious Handrawn', sans-serif;
+    font-size: 40px;
+    line-height:10px;
+
+}
+
+
+.section-container{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 30px;
+    margin-bottom: 60px;
+}
+
+
+.section-title{
+    font-family: 'Delicious Handrawn', sans-serif;
+    font-size: 40px;
+    line-height:10px;
+}
+
+.section-content{
+}
+
+.section-content button{
+    font-family: 'Delicious Handrawn', sans-serif;
+    margin-top: 20px;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-style: none;
+    border-radius: 8px;
+    background-color: #0D7DE0;
+    color: white;
+}
+
+.section-content button:hover{
+    cursor: pointer;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    margin: 80px 0; /* Optional spacing */
+}
+
+
+
+
+
+
+
+
+
+
+
+.other-projects-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.other-projects-row{
+    display: flex;
+    column-gap: 40px;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.other-project{
+    font-family: 'Delicious Handrawn', sans-serif;
+    font-size: 20px;
+    color:#2D2D2D;
+    text-decoration: none;
+}
+
+.other-project:hover{
+    cursor:pointer;
+    color:#FF046D;
+}
+
+
+.copyright{
+    text-align: center;
+    font-family: 'Borel';
+    font-size:14px;
+    margin: 20px 0;
+}

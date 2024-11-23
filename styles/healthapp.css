@@ -1,0 +1,380 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin:0;
+    font-family: 'Open sans', sans-serif;
+    font-size: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 20px;
+    position:fixed;
+    left:0;
+    right:0;
+    z-index:100;
+    background-color: white;
+}
+
+
+.header-content{
+    margin-right: 20px;
+    font-family: 'Delicious Handrawn', sans-serif;
+    font-size: 20px;
+    color: #2D2D2D;
+    text-decoration: none;
+}
+
+.header-content:hover{
+    color: #FF046D;
+}
+
+.spacer {
+    height: 100px; /* Equal to the height of the fixed header plus any desired gap */
+}
+
+
+
+
+/* set initial state of elements with this class*/
+.fade-in{
+    opacity:0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* final state after the animation*/
+.fade-in.visible{
+    opacity:1;
+    transform: translateY(0);
+}
+
+
+
+
+
+.page-title{
+    font-family: 'Delicious Handrawn', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.page-desc{
+    text-align: center;
+}
+
+.healthapp-landing-image{
+    width: 80%;
+    margin-top: 20px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+}
+
+.section-project-desc-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
+    margin-bottom: 60px;
+}
+
+.section-project-desc{
+    display:flex;
+    column-gap: 10px;
+}
+
+
+.section-project-desc-title{
+    font-family: 'Delicious Handrawn', sans-serif;
+    font-size: 40px;
+    line-height:10px;
+
+}
+
+
+.section-container{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 30px;
+    margin-bottom: 120px;
+}
+
+.section-content button{
+    font-family: 'Delicious Handrawn', sans-serif;
+    margin-top: 20px;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-style: none;
+    border-radius: 8px;
+    background-color: #003963;
+    color: white;
+}
+
+.section-content button:hover{
+    cursor: pointer;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    margin: 80px 0; /* Optional spacing */
+}
+
+.overview-title{
+    font-family: 'Delicious Handrawn', sans-serif;
+    font-size: 40px;
+    line-height:10px;
+}
+
+.section-title{
+    font-family: 'Delicious Handrawn', sans-serif;
+    font-size: 40px;
+    line-height:10px;
+    position: sticky; /* Makes the element sticky */
+    top: 100px; /* The distance from the top of the viewport */
+    align-self: start; /* Ensures proper alignment in grid layout */
+   
+}
+
+
+.section-content-desc{
+    margin-bottom: 60px;
+}
+
+.section-content-desc-center{
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+
+.insight1-image{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+
+.insight2-image{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+.insight3-image{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.opportunity-image{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+
+.ideation-image1{
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.ideation-image2{
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+
+.design-system-image{
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.final-design-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    margin-bottom: 120px;
+}
+
+.final-design-desc{
+    margin-top: auto;
+    margin-bottom: auto;
+    justify-self: end;
+    width: 400px;
+}
+
+.final-design-image{
+    width: 50%;
+}
+
+.other-projects-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.other-projects-row{
+    display: flex;
+    column-gap: 40px;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.other-project{
+    font-family: 'Delicious Handrawn', sans-serif;
+    font-size: 20px;
+    color:#2D2D2D;
+    text-decoration: none;
+}
+
+.other-project:hover{
+    cursor:pointer;
+    color:#FF046D;
+}
+
+.copyright{
+    text-align: center;
+    font-family: 'Borel';
+    font-size:14px;
+    margin: 20px 0;
+}
+
+
+
+
+
+/* image modal */
+
+.thumbnail:hover{
+    cursor: pointer;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+  }
+  
+  /* Modal content (image) */
+  .modal-content {
+    display: block;
+    width: 80%;
+    margin: auto;
+  }
+  
+  /* Close button */
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+/* breakpoints */
+@media (max-width: 1200px) {
+    .section-project-desc-container{
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 60px;
+    }
+    
+    .section-project-desc{
+        margin-bottom: 40px;
+    }
+
+    .section-container{
+        grid-template-columns: 1fr; /* Single column layout */
+        row-gap: 20px;
+        margin-bottom: 120px;
+    }
+
+    .section-title{
+        font-family: 'Delicious Handrawn', sans-serif;
+        font-size: 40px;
+        line-height:10px;
+        position: relative; /* Makes the element sticky */
+        top: 0;
+        margin-bottom: 10px;
+    }
+
+    .final-design-container{
+        grid-template-columns: 1fr;
+    }
+
+    .final-design-desc{
+        justify-self: center;
+        width: 100%;
+        text-align: center; 
+        margin-bottom: 40px;
+    }
+
+    .final-design-image{
+        justify-self: center;
+        width: 40%;
+    }
+}
+
+
+
+
+@media (max-width: 767px) {
+    .healthapp-landing-image{
+        width: 100%;
+    }
+
+    .section-project-desc-container{
+        grid-template-columns: 1fr;
+        margin-bottom: 60px;
+    }
+}

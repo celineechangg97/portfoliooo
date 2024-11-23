@@ -1,0 +1,372 @@
+body{
+    background-color: #FFD8D5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures full height of the viewport */
+}
+
+p{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.header{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 20px;
+    position:fixed;
+    left:0;
+    right:0;
+    background-color: #FFD8D5;
+    z-index: 100;
+}
+
+.header-content{
+    margin-right: 20px;
+    font-family: 'Delicious Handrawn', sans-serif;
+    font-size: 20px;
+    color: #2D2D2D;
+    text-decoration: none;
+}
+
+.header-content:hover{
+    color: #FF046D;
+}
+
+/* set initial state of elements with this class*/
+.fade-in{
+    opacity:0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* final state after the animation*/
+.fade-in.visible{
+    opacity:1;
+    transform: translateY(0);
+}
+
+
+
+.content-wrapper{
+    flex: 1; /* Pushes the footer to the bottom */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.left-sparkle{
+    position:fixed;
+    left:50px;
+    top: 100px;
+    width: 80px;
+}
+
+.left-gif-sparkle{
+    position:fixed;
+    left:20px;
+    top: 50px;
+    width: 200px;
+}
+
+
+.right-sparkle{
+    position:fixed;
+    right:0;
+    top:400px;
+    width:160px;
+}
+
+.right-gif-sparkle{
+    position:fixed;
+    right:0;
+    top:400px;
+    width:160px;
+}
+
+
+
+
+.wave{
+    position: fixed;
+    width:100%;
+    bottom:-200px;
+    z-index:-10;
+}
+
+
+.home-main-words{
+    margin-top: 100px;
+}
+
+.home-title{
+    font-family: 'Delicious Handrawn', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: #FF046D;
+}
+
+.home-subtitle{
+    font-family: 'Delicious Handrawn', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: #2D2D2D;
+}
+
+
+.name{
+    display:grid;
+    justify-content: center;
+    grid-template-columns: 40px 40px 40px 40px 40px 40px;
+    column-gap: 60px;
+    color: #FF046D;
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+
+.name-letter{
+    font-family: 'Delicious Handrawn', sans-serif;
+    font-size: 140px;
+    /* animation */
+    transform: translateY(0);
+    animation: slideBounce 0.8s ease forwards;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards;
+}
+
+/* animation keyframes */
+@keyframes slideBounce{
+    0% {
+        transform: translateY(30px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: trasnslateY(0);
+    }
+}
+
+.letter-c{
+    margin-top:20px;
+    animation-delay:-0.1s;
+}
+
+.letter-e:first-of-type{
+    margin-top:-40px;
+    animation-delay:0.1s;
+}
+
+.letter-l{
+    animation-delay:0.2s;
+}
+
+.letter-i{
+    margin-top: 50px;
+    animation-delay:0.3s;
+}
+
+.letter-n{
+    animation-delay:0.4s;
+}
+
+.letter-e:last-of-type{
+    animation-delay:0.5s;
+}
+
+.project-row{
+    margin-bottom: 80px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-row:hover{
+    cursor:pointer;
+}
+
+
+.project-title{
+    font-family: 'Delicious Handrawn', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    position:relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    white-space: nowrap;
+
+}
+
+
+
+
+
+
+/* animation of highlighting project title */
+.project-row:hover .project-title::before {  
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.project-title::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background-color: #FF98B6;
+    border-radius:10px;
+    z-index: -1;
+    transition: transform .3s ease;
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: bottom right;
+}
+  
+
+
+
+
+
+
+.project-description{
+    font-family: 'Borel';
+    text-align: center;
+    margin-top: 8px;
+    white-space: nowrap;
+}
+
+.project-date{
+    font-family: 'Borel';
+    text-align: center;
+    margin-top: -10px;
+    white-space: nowrap;
+
+    
+}
+
+.project-position{
+    font-family: 'Borel';
+    text-align: center;
+    margin-top: -10px;
+    white-space: nowrap;
+
+
+}
+
+.copyright{
+    text-align: center;
+    font-family: 'Borel';
+    font-size:14px;
+    margin: 20px 0;
+}
+
+
+
+
+
+/* breakpoints */
+@media (min-width: 1200px) {
+    .left-sparkle {
+        left:150px;
+        top: 150px;
+        width: 130px;
+    }
+
+    .left-gif-sparkle{
+        left:120px;
+        top: 120px;
+        width: 250px;
+    }
+    
+    
+    .right-sparkle{
+        right:100px;
+        top:400px;
+        width:160px;
+    }
+    
+    .right-gif-sparkle{
+        right:120px;
+        top:400px;
+        width:200px;
+    }
+
+    .wave{
+        bottom:-300px;
+    }
+}
+
+@media (max-width: 800px){
+    .project-title{
+        font-size:50px;
+    }
+    
+    .project-description,
+    .project-date,
+    .project-position{
+        font-size: 18px;
+    }
+
+    .name {
+        font-size: 100px; /* Reduce font size for medium screens */
+        column-gap: 40px; /* Adjust spacing between letters */
+    }
+
+    .wave{
+        visibility: hidden;
+    }
+}
+
+
+
+@media (max-width: 500px){
+    .left-sparkle {
+        left:20px;
+        top: 150px;
+        width: 100px;
+    }
+
+    .left-gif-sparkle{
+        left:10px;
+        top: 120px;
+        width: 160px;
+    }
+    
+    
+    .right-sparkle{
+        right:0px;
+        top:350px;
+        width:160px;
+    }
+    
+    .right-gif-sparkle{
+        right:0px;
+        top:350px;
+        width:200px;
+    }
+
+    .project-title{
+        font-size:60px;
+    }
+    
+    .project-description,
+    .project-date,
+    .project-position{
+        font-size: 22px;
+    }
+
+    .name {
+        font-size: 60px; /* Further reduce font size for smaller screens */
+        column-gap: 20px; /* Reduce spacing further */
+    }
+}
+
